@@ -1,0 +1,13 @@
+# Cloudflare Pages 部署配置
+name = "clouderp"
+compatibility_date = "2025-07-04"
+
+# Pages 项目配置
+[pages]
+build_output_dir = "dist"
+deployment_target = "production"
+
+# 环境变量 (可选)
+[vars]
+APP_NAME = "CloudERP"
+APP_VERSION = "1.0.0"
