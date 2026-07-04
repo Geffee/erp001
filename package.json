@@ -8,7 +8,12 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "wrangler pages deploy dist --project-name=clouderp"
+    "deploy": "wrangler pages deploy dist --project-name=erp001",
+    "worker:dev": "wrangler dev",
+    "worker:deploy": "wrangler deploy",
+    "db:init": "wrangler d1 execute erp001-db --file=schema.sql",
+    "db:init:local": "wrangler d1 execute erp001-db --local --file=schema.sql",
+    "init": "wrangler d1 execute erp001-db --file=schema.sql && npm run build && npx wrangler deploy"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
